@@ -45,6 +45,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<UserProvider>(context);
+    
     final size = MediaQuery.of(context).size;
     var textStyle = TextStyle(fontFamily: 'Lato', fontSize: 18);
     final f = new DateFormat.yMMMMd("en_US");
@@ -242,7 +243,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                     ),
                                   ],
                                 ),
-                                Text(user.user.public_repo.toString() ?? 'None',
+                                Text(user.user.public_repo.toString(),
                                     style: textStyle),
                               ],
                             ),

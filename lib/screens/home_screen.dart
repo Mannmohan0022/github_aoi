@@ -15,7 +15,6 @@ class _HomeScreenState extends State<HomeScreen> {
     if (!_formKey.currentState!.validate()) {
       return;
     }
-
     Navigator.of(context).push(MaterialPageRoute(
         builder: (ctx) => UserDetailsScreen(
               username: _usernameController.text,
